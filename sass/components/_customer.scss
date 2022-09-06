@@ -1,0 +1,45 @@
+@import '../utils/variables';
+
+.customer {
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        color: getColor(iconColor);
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 92px;
+        border: 1px solid getColor(borderColorCustomer);
+        border-radius: 4px;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: $timingBuzier;
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        border: 1px solid getColor(acentTextColor);
+        color: getColor(acentTextColor);
+        cursor: pointer;
+    }
+}

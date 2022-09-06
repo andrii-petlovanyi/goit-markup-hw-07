@@ -1,0 +1,37 @@
+@import '../utils/variables';
+
+.features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: getColor(primaryTextColor);
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        height: 120px;
+        margin-bottom: 30px;
+        background-color: getColor(accentBlockColor);
+        border-radius: 4px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.7;
+        color: getColor(otherTextColor);
+    }
+}
