@@ -183,7 +183,10 @@
     }
 
     &__input {
-        display: none;
+        position: absolute;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
 
         &:checked ~ .check__icon-checked {
                 opacity: 1;
