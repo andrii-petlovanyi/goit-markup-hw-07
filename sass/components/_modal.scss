@@ -13,19 +13,17 @@
     visibility: visible;
     transition: opacity 250ms $timingBuzier,
         visibility 250ms $timingBuzier;
+
+    &.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+    
+            & .modal {
+                transform: translate(-50%, -50%) scale(0.7);
+            }
+        }
 }
-
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-
-    & .modal {
-        transform: translate(-50%, -50%) scale(0.7);
-    }
-}
-
-
 
 .modal {
     position: absolute;
@@ -58,19 +56,12 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 50%;
         transition: color 250ms $timingBuzier;
-    }
 
-    &__btn:hover,
-    &__btn:focus {
-        cursor: pointer;
-        color: getColor(acentTextColor);
-    }
-
-    & .input:focus,
-    & .comment:focus {
-        border: 1px solid getColor(acentTextColor);
-        border-radius: 4px;
-        outline: none;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            color: getColor(acentTextColor);
+        }
     }
 }
 
@@ -102,6 +93,16 @@
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         transition: border 250ms $timingBuzier;
+
+        &:focus {
+            border: 1px solid getColor(acentTextColor);
+            border-radius: 4px;
+            outline: none;
+        }
+
+        &:focus + .form__icon {
+            color: getColor(acentTextColor);
+        }
     }
 
     &__info {
@@ -120,10 +121,6 @@
         transition: color 250ms $timingBuzier;
     }
 
-    &__input:focus + .form__icon {
-        color: getColor(acentTextColor);
-    }
-
     &__label-coment {
         margin-bottom: 20px;
     }
@@ -137,14 +134,22 @@
         border-radius: 4px;
         resize: none;
         transition: border 250ms $timingBuzier;
+
+        &::placeholder {
+            font-size: 12px;
+            line-height: 1.16;
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
+
+        &:focus {
+            border: 1px solid getColor(acentTextColor);
+            border-radius: 4px;
+            outline: none;
+        }
     }
 
-    &__comment::placeholder {
-        font-size: 12px;
-        line-height: 1.16;
-        letter-spacing: 0.01em;
-        color: rgba(117, 117, 117, 0.5);
-    }
+    
 
     &__send {
         padding: 10px 52px;
@@ -179,6 +184,10 @@
 
     &__input {
         display: none;
+
+        &:checked ~ .check__icon-checked {
+                opacity: 1;
+            }
     }
 
     &__icon {
@@ -194,10 +203,6 @@
         margin-right: 7px;
         opacity: 0;
         transition: opacity 250ms $timingBuzier;
-    }
-
-    &__input:checked ~ &__icon-checked {
-        opacity: 1;
     }
 }
 

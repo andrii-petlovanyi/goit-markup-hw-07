@@ -27,13 +27,13 @@
         cursor: pointer;
         transition: background 250ms $timingBuzier,
             color 250ms $timingBuzier;
+        
+        &:hover,
+        &:focus {
+            background: getColor(secondTextColor);
+            color: getColor(acentTextColor);
         }
-    
-    &__button:hover,
-    &__button:focus {
-        background: getColor(secondTextColor);
-        color: getColor(acentTextColor);
-    }
+        }
 
     &__title {
         font-weight: 900;

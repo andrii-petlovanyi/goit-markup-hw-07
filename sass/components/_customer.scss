@@ -30,16 +30,16 @@
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: $timingBuzier;
+
+        &:hover,
+        &:focus {
+            border: 1px solid getColor(acentTextColor);
+            color: getColor(acentTextColor);
+            cursor: pointer;
+        }
     }
 
     &__icon {
         fill: currentColor;
-    }
-
-    &__link:hover,
-    &__link:focus {
-        border: 1px solid getColor(acentTextColor);
-        color: getColor(acentTextColor);
-        cursor: pointer;
     }
 }

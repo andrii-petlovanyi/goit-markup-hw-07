@@ -241,27 +241,6 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.container--position {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  margin-right: 93px;
-  color: #212121;
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
-}
-.logo__peace {
-  color: #2196f3;
-}
-.logo__footer {
-  color: #fff;
-}
-
 .navigation {
   display: flex;
   align-items: center;
@@ -315,12 +294,28 @@ body {
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.contacts__link:hover, .contacts__link:focus {
+  color: #2196f3;
+}
 .contacts__email-icon, .contacts__smartphone-icon {
   fill: currentColor;
   margin-right: 10px;
 }
-.contacts__link:hover, .contacts__link:focus {
+
+.logo {
+  margin-right: 93px;
+  color: #212121;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+.logo__peace {
   color: #2196f3;
+}
+.logo__footer {
+  color: #fff;
 }
 
 .hero {
@@ -475,12 +470,12 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team .card__icon {
-  fill: currentColor;
-}
 .team .card__link:hover, .team .card__link:focus {
   background-color: #2196f3;
   color: #fff;
+}
+.team .card__icon {
+  fill: currentColor;
 }
 .team .card__title {
   font-weight: 500;
@@ -522,13 +517,13 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customer__icon {
-  fill: currentColor;
-}
 .customer__link:hover, .customer__link:focus {
   border: 1px solid #2196f3;
   color: #2196f3;
   cursor: pointer;
+}
+.customer__icon {
+  fill: currentColor;
 }
 
 .footer {
@@ -564,11 +559,11 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer .address__link--white {
-  color: #fff;
-}
 .footer .address__link:hover, .footer .address__link:focus {
   color: #2196f3;
+}
+.footer .address__link--white {
+  color: #fff;
 }
 
 .footer .socials {
@@ -653,7 +648,6 @@ body {
   visibility: visible;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -698,11 +692,6 @@ body {
   cursor: pointer;
   color: #2196f3;
 }
-.modal .input:focus, .modal .comment:focus {
-  border: 1px solid #2196f3;
-  border-radius: 4px;
-  outline: none;
-}
 
 .modal .form {
   display: flex;
@@ -731,6 +720,14 @@ body {
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal .form__input:focus {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  outline: none;
+}
+.modal .form__input:focus + .form__icon {
+  color: #2196f3;
+}
 .modal .form__info {
   font-weight: 400;
   font-size: 12px;
@@ -744,9 +741,6 @@ body {
   top: 50%;
   fill: currentColor;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal .form__input:focus + .form__icon {
-  color: #2196f3;
 }
 .modal .form__label-coment {
   margin-bottom: 20px;
@@ -766,6 +760,11 @@ body {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.modal .form__comment:focus {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  outline: none;
 }
 .modal .form__send {
   padding: 10px 52px;
@@ -797,6 +796,9 @@ body {
 .check__input {
   display: none;
 }
+.check__input:checked ~ .check__icon-checked {
+  opacity: 1;
+}
 .check__icon {
   position: relative;
   margin-right: 7px;
@@ -809,9 +811,6 @@ body {
   margin-right: 7px;
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.check__input:checked ~ .check__icon-checked {
-  opacity: 1;
 }
 
 .portfolio {
@@ -862,6 +861,12 @@ body {
   display: inline-block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.portfolio .list__card:hover .list__thumb::before, .portfolio .list__card:hover .list__label, .portfolio .list__card:focus .list__thumb::before, .portfolio .list__card:focus .list__label {
+  transform: translateY(0);
+}
+.portfolio .list__card:hover, .portfolio .list__card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio .list__thumb {
   position: relative;
   overflow: hidden;
@@ -897,12 +902,6 @@ body {
   letter-spacing: 0.03em;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.portfolio .list__card:hover .list__thumb::before, .portfolio .list__card:hover .list__label, .portfolio .list__card:focus .list__thumb::before, .portfolio .list__card:focus .list__label {
-  transform: translateY(0);
-}
-.portfolio .list__card:hover, .portfolio .list__card:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio .list__wrap {
   padding: 20px 0 20px 24px;

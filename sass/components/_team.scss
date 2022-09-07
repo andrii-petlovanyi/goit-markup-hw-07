@@ -50,16 +50,16 @@
         transition-property: background-color, color;
         transition-duration: 250ms;
         transition-timing-function: $timingBuzier;
+
+        &:hover,
+        &:focus {
+            background-color: getColor(acentTextColor);
+            color: getColor(secondTextColor);
+        }
     }
 
     &__icon {
         fill: currentColor;
-    }
-
-    &__link:hover,
-    &__link:focus {
-        background-color: getColor(acentTextColor);
-        color: getColor(secondTextColor);
     }
 
     &__title {

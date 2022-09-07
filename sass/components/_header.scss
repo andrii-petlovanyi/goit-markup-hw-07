@@ -5,30 +5,6 @@
     border-bottom: 1px solid #ececec;
 }
 
-.container--position {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    margin-right: 93px;
-    color: getColor(primaryTextColor);
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    text-decoration: none;
-
-    &__peace {
-            color: getColor(acentTextColor);
-        }
-
-    &__footer {
-        color: getColor(secondTextColor);
-    }
-}
-
-
 .navigation {
     display: flex;
     align-items: center;
@@ -50,22 +26,25 @@
         letter-spacing: 0.02em;
         text-decoration: none;
         transition: color 250ms $timingBuzier;
+
+        &:hover,
+        &:focus {
+            color: getColor(acentTextColor);
+        }
     }
 
-    &__link:hover,
-    &__link:focus {
-        color: getColor(acentTextColor);
-    }
 
-    &__link--active::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        bottom: 0;
-        right: 0;
-        background-color: getColor(acentTextColor);
-        border-radius: 2px;
+    &__link--active {
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            bottom: 0;
+            right: 0;
+            background-color: getColor(acentTextColor);
+            border-radius: 2px;
+        }
     }
 }
 
@@ -86,6 +65,11 @@
         text-decoration: none;
         cursor: pointer;
         transition: color 250ms $timingBuzier;
+
+        &:hover,
+        &:focus {
+            color: getColor(acentTextColor);
+        }
         }
 
     &__email-icon,
@@ -94,8 +78,4 @@
         margin-right: 10px;
     }
 
-    &__link:hover,
-    &__link:focus {
-        color: getColor(acentTextColor);
-    }
 }
