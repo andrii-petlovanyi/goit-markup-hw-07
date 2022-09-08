@@ -8,12 +8,12 @@
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
+}
 
-    &__peace {
-        color: getColor(acentTextColor);
-    }
+.logo__peace {
+    color: getColor(acentTextColor);
+}
 
-    &__footer {
-        color: getColor(secondTextColor);
-    }
+.logo__footer {
+    color: getColor(secondTextColor);
 }

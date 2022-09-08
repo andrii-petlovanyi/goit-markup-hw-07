@@ -4,132 +4,126 @@
     background-color: getColor(secondBlockColor);
     padding-top: 60px;
     padding-bottom: 60px;
+}
 
-    & .logo {
-            display: block;
-            margin-bottom: 20px;
-        }
+.footer .logo {
+    display: block;
+    margin-bottom: 20px;
+}
 
-    &__title {
-        margin-bottom: 20px;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-    }
+.footer__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
 
-    &__socials,
-    &__subscribe {
-        color: getColor(secondTextColor);
+.footer__socials,
+.footer__subscribe {
+    color: getColor(secondTextColor);
+}
+
+.footer .address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.footer .address__link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingBuzier;
+
+    &:hover,
+    &:focus {
+        color: getColor(acentTextColor);
     }
 }
 
-
-.footer .address {
-    &__item:not(:last-child) {
-        margin-bottom: 9px;
-    }
-
-    &__link {
-        font-style: normal;
-        font-size: 14px;
-        line-height: 1.71;
-        color: rgba(255, 255, 255, 0.6);
-        text-decoration: none;
-        transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: $timingBuzier;
-
-        &:hover,
-        &:focus {
-            color: getColor(acentTextColor);
-        }
-    }
-
-    &__link--white {
-        color: getColor(secondTextColor);
-    }
-
+.footer .address__link--white {
+    color: getColor(secondTextColor);
 }
 
 .footer .socials {
     display: flex;
     gap: 10px;
+}
 
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.1);
-        transition-property: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: $timingBuzier;
+.footer .socials__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingBuzier;
 
-        &:hover,
-        &:focus {
-            background-color: getColor(acentTextColor);
-        }
+    &:hover,
+    &:focus {
+        background-color: getColor(acentTextColor);
     }
+}
 
-    
-
-    &__icon {
-        fill: getColor(accentBlockColor);
-    }
+.footer .socials__icon {
+    fill: getColor(accentBlockColor);
 }
 
 .footer .subscribe {
     display: flex;
     flex-direction: row;
+}
 
-    &__email {
-        width: 358px;
-        height: 50px;
-        padding: 15px 16px;
-        background: none;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: rgba(255, 255, 255, 0.6);
-        border-radius: 4px;
-        transition: border 250ms $timingBuzier;
+.footer .subscribe__email {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    transition: border 250ms $timingBuzier;
 
-        &:focus {
-            border: 1px solid getColor(acentTextColor);
-            outline: none;
-        }
+    &:focus {
+        border: 1px solid getColor(acentTextColor);
+        outline: none;
     }
+}
 
-    &__icon {
-        fill: currentColor;
-        margin-left: 10px;
-    }
+.footer .subscribe__icon {
+    fill: currentColor;
+    margin-left: 10px;
+}
 
-    &__btn {
-        width: 200px;
-        height: 50px;
-        margin-left: 12px;
-        padding: 10px 28px;
-        background-color: getColor(acentTextColor);
-        color: getColor(secondTextColor);
-        border: none;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.87;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.06em;
-        transition: color 250ms $timingBuzier,
-            background 250ms $timingBuzier;
+.footer .subscribe__btn {
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    padding: 10px 28px;
+    background-color: getColor(acentTextColor);
+    color: getColor(secondTextColor);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    transition: color 250ms $timingBuzier,
+        background 250ms $timingBuzier;
 
-        &:hover,
-        &:focus {
-            background: getColor(secondTextColor);
-            color: getColor(acentTextColor);
-            cursor: pointer;
-        }
+    &:hover,
+    &:focus {
+        background: getColor(secondTextColor);
+        color: getColor(acentTextColor);
+        cursor: pointer;
     }
 }

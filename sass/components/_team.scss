@@ -4,74 +4,74 @@
     background-color: getColor(accentBlockColor);
     padding-top: 94px;
     padding-bottom: 94px;
+}
 
-    &__title {
-        margin-bottom: 50px;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.17;
-        text-align: center;
-        color: getColor(primaryTextColor);
-    }
+.team__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: getColor(primaryTextColor);
+}
 
-    &__list {
-        display: flex;
-        gap: 30px;
-    }
+.team__list {
+    display: flex;
+    gap: 30px;
+}
 
-    &__item {
-        background: getColor(secondTextColor);
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-            0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 0px 0px 4px 4px;
-        text-align: center;
-    }
+.team__item {
+    background: getColor(secondTextColor);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
 }
 
 .team .card {
     padding: 30px 20px;
+}
 
-    &__title {
-        margin-bottom: 10px;
+.team .card__title {
+    margin-bottom: 10px;
+}
+
+.team .card__links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+    color: getColor(iconColor);
+}
+
+.team .card__link {
+    display: flex;
+    border-radius: 50%;
+    padding: 12px;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingBuzier;
+
+    &:hover,
+    &:focus {
+        background-color: getColor(acentTextColor);
+        color: getColor(secondTextColor);
     }
+}
 
-    &__links {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 16px;
-        color: getColor(iconColor);
-    }
+.team .card__icon {
+    fill: currentColor;
+}
 
-    &__link {
-        display: flex;
-        border-radius: 50%;
-        padding: 12px;
-        transition-property: background-color, color;
-        transition-duration: 250ms;
-        transition-timing-function: $timingBuzier;
+.team .card__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    color: getColor(primaryTextColor);
+}
 
-        &:hover,
-        &:focus {
-            background-color: getColor(acentTextColor);
-            color: getColor(secondTextColor);
-        }
-    }
-
-    &__icon {
-        fill: currentColor;
-    }
-
-    &__title {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.19;
-        color: getColor(primaryTextColor);
-    }
-
-    &__label {
-        font-size: 16px;
-        line-height: 1.19;
-        color: getColor(otherTextColor);
-    }
+.team .card__label {
+    font-size: 16px;
+    line-height: 1.19;
+    color: getColor(otherTextColor);
 }

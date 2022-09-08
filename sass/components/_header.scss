@@ -8,43 +8,42 @@
 .navigation {
     display: flex;
     align-items: center;
+}
 
-    &__list {
-            display: flex;
-            gap: 50px;
-        }
-    
-    &__link {
-        position: relative;
-        display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
-        color: vgetColor(primaryTextColor);
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-        text-decoration: none;
-        transition: color 250ms $timingBuzier;
+.navigation__list {
+    display: flex;
+    gap: 50px;
+}
 
-        &:hover,
-        &:focus {
-            color: getColor(acentTextColor);
-        }
+.navigation__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: vgetColor(primaryTextColor);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color 250ms $timingBuzier;
+
+    &:hover,
+    &:focus {
+        color: getColor(acentTextColor);
     }
+}
 
-
-    &__link--active {
-        &::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 4px;
-            bottom: 0;
-            right: 0;
-            background-color: getColor(acentTextColor);
-            border-radius: 2px;
-        }
+.navigation__link--active {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        right: 0;
+        background-color: getColor(acentTextColor);
+        border-radius: 2px;
     }
 }
 
@@ -52,30 +51,29 @@
     display: flex;
     margin-left: auto;
     gap: 50px;
+}
 
-    &__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: getColor(otherTextColor);
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-        text-decoration: none;
-        cursor: pointer;
-        transition: color 250ms $timingBuzier;
+.contacts__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: getColor(otherTextColor);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 250ms $timingBuzier;
 
-        &:hover,
-        &:focus {
-            color: getColor(acentTextColor);
-        }
-        }
-
-    &__email-icon,
-    &__smartphone-icon {
-        fill: currentColor;
-        margin-right: 10px;
+    &:hover,
+    &:focus {
+        color: getColor(acentTextColor);
     }
+}
 
+.contacts__email-icon,
+.contacts__smartphone-icon {
+    fill: currentColor;
+    margin-right: 10px;
 }
