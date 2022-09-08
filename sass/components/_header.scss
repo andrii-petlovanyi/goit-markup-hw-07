@@ -49,14 +49,16 @@
 
 .contacts {
     display: flex;
+    align-items: center;
     margin-left: auto;
     gap: 50px;
 }
 
+.contacts__item {
+    position: relative;
+}
+
 .contacts__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: getColor(otherTextColor);
     font-weight: 500;
     font-size: 14px;

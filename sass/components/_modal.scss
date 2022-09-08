@@ -188,6 +188,11 @@
     margin-right: 7px;
     top: 0px;
     transition: opacity 250ms $timingBuzier;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
 }
 
 .form .check__icon-checked {
@@ -199,6 +204,11 @@
     margin-right: 7px;
     opacity: 0;
     transition: opacity 250ms $timingBuzier;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
 }
 
 .form .check__input {
@@ -210,4 +220,5 @@
     &:checked~.check__icon-checked {
         opacity: 1;
     }
+
 }
