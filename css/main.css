@@ -707,7 +707,7 @@ body {
   display: flex;
   padding: 40px;
   width: 528px;
-  height: 591px;
+  height: 581px;
   background-color: #fff;
   transform: translate(-50%, -50%) scale(1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -777,6 +777,7 @@ body {
 }
 
 .modal .form__info {
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -787,7 +788,7 @@ body {
 .modal .form__icon {
   position: absolute;
   left: 15px;
-  top: 55%;
+  top: 50%;
   fill: currentColor;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -850,16 +851,18 @@ body {
 
 .form .check__icon {
   position: relative;
-  margin-right: 9px;
+  margin-right: 7px;
   top: 0px;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form .check__icon-checked {
   position: absolute;
+  display: flex;
+  align-items: center;
   left: 0;
   top: 4px;
-  margin-right: 9px;
+  margin-right: 7px;
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
