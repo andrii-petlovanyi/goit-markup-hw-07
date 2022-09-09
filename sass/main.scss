@@ -1,8 +1,9 @@
 @import './utils/normalize';
 @import './utils/mydefaults';
+@import '../sass/base/fonts';
 @import './utils/variables';
 @import './components/body';
-@import './utils/container';
+@import './base/container';
 @import './components/header';
 @import './components/logo';
 @import './components/hero';
